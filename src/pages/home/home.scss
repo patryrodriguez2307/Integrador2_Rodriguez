@@ -1,0 +1,44 @@
+@use "@/scss/variables" as var;
+
+.home {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: var.$spacing-lg;
+    padding: var.$spacing-lg;
+
+    &__title {
+        font-family: cursive;
+        font-size: 4rem;
+        color: blueviolet;
+        position: relative;
+    }
+
+    &__image {
+        width: 300px;
+        height: 400px;
+        margin: 10px;
+        border-radius: 4px;
+        position: relative;
+        transition: transform 0.5s ease;
+        transform: scale(1);
+
+        &:hover {
+            transform: scale(1.2);
+
+        }
+
+        &__title {
+            font-family: cursive;
+            font-size: 1.5rem;
+            color: blueviolet;
+            display: block;
+            position: absolute;
+            transition: transform 0.5s ease;
+            transform: scale(1);
+
+
+        }
+    }
+}
