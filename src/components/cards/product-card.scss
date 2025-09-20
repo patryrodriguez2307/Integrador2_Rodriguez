@@ -1,0 +1,64 @@
+@use "@/scss/variables" as var;
+
+.product-card {
+
+    width: 400px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: var.$spacing-md;
+    padding: var.$spacing-md;
+    border-radius: var.$spacing-md 0 var.$spacing-md 0;
+    background-color: var.$color-primary-400;
+    position: relative;
+    z-index: 1;
+
+    &__image {
+        border-top-left-radius: var.$spacing-sm;
+        width: 100%;
+        height: 50%;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+
+    &__title {
+        font-size: var.$font-size-md;
+        font-weight: var.$font-weight-bold;
+        color: var.$color-neutro-900;
+    }
+
+    &__code {
+        font-size: var.$font-size-xs;
+        color: var.$color-neutro-500;
+        text-align: right;
+    }
+
+    &__description {
+        font-size: var.$font-size-md;
+        color: var.$color-neutro-700;
+        text-align: justify;
+        text-ellipsis($lines: 3) display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: $lines;
+        line-clamp: $lines;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-height: calc(1.4em * $lines);
+        word-break: break-word;
+    }
+
+    &__price {
+        font-size: var.$font-size-md;
+        font-weight: var.$font-weight-bold;
+        color: var.$color-neutro-900;
+        text-align: center;
+    }
+
+    .action-card {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+}

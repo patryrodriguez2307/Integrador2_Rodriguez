@@ -1,0 +1,24 @@
+@use "@/scss/variables" as var;
+
+.searchBar-box {
+    display: flex;
+    justify-content: right;
+    align-items: start;
+    padding-top: 15px;
+    padding-right: 15px;
+
+
+}
+
+input {
+    padding: 10px;
+    background-color: #d9d9d9;
+    border: none;
+    width: 25%;
+    border-radius: 15px;
+
+    &::placeholder {
+        font-size: 15px;
+        font-weight: bold;
+    }
+}
