@@ -1,227 +1,244 @@
 
-const KEY_PRODUCTS = "products";
+const productsData = [
+    {
 
-const productsData = () => {
-  const productData = {
-           [
-            {
-        image: {"/images/products/cupcake-americana.jpg"},
-         id: 1,
+        id: 1,
         name: "Delicia de Crema Americana",
         description: "pequeño pastel individual, similar a una tarta, conocido por su masa dulce y esponjosa, su tamaño de una porción y su distintiva y colorida decoración con coberturas y glaseados, siendo popular en celebraciones y fiestas. A diferencia de los muffins, los cupcakes se centran en la estética y el sabor dulce, a menudo incluyendo decoraciones elaboradas con buttercream, fondant o frutas.",
         stock: 24,
         price: 250,
-         },
+        thumbnail: "cupcake-americana.jpg",
 
-          {
-        image: {"/images/products/cupcake-arandanos.jpg"},
+    },
+
+    {
+
         id: 2,
         name: "Tropezones de Arándanos",
         description: "pequeño pastel individual, similar a una tarta, conocido por su masa dulce y esponjosa, su tamaño de una porción y su distintiva y colorida decoración con coberturas y glaseados, siendo popular en celebraciones y fiestas. A diferencia de los muffins, los cupcakes se centran en la estética y el sabor dulce, a menudo incluyendo decoraciones elaboradas con buttercream, fondant o frutas.",
         stock: 24,
         price: 450,
-         },
-          {
-        image: {"/images/products/cupcake-caramel.jpg"},
-         id: 3,
+        thumbnail: "cupcake-arandanos.jpg",
+
+    },
+    {
+
+        id: 3,
         name: "Delicia de Caramelo",
         description: "pequeño pastel individual, similar a una tarta, conocido por su masa dulce y esponjosa, su tamaño de una porción y su distintiva y colorida decoración con coberturas y glaseados, siendo popular en celebraciones y fiestas. A diferencia de los muffins, los cupcakes se centran en la estética y el sabor dulce, a menudo incluyendo decoraciones elaboradas con buttercream, fondant o frutas.",
         stock: 24,
         price: 350,
-         },
+        thumbnail: "cupcake-caramel.jpg",
 
-          {
-        image: {"/images/products/cupcake-chantilly.jpg"},
-         id: 4,
+    },
+
+    {
+
+        id: 4,
         name: "Nube de Chantilly",
         description: "pequeño pastel individual, similar a una tarta, conocido por su masa dulce y esponjosa, su tamaño de una porción y su distintiva y colorida decoración con coberturas y glaseados, siendo popular en celebraciones y fiestas. A diferencia de los muffins, los cupcakes se centran en la estética y el sabor dulce, a menudo incluyendo decoraciones elaboradas con buttercream, fondant o frutas.",
         stock: 24,
         price: 300,
-         },
+        thumbnail: "cupcake-chantilly.jpg",
 
-          {
-        image: {"/images/products/cupcake-cream.jpg"},
-         id: 5,
+    },
+
+    {
+
+        id: 5,
         name: "Delicia de Vainilla",
         description: "pequeño pastel individual, similar a una tarta, conocido por su masa dulce y esponjosa, su tamaño de una porción y su distintiva y colorida decoración con coberturas y glaseados, siendo popular en celebraciones y fiestas. A diferencia de los muffins, los cupcakes se centran en la estética y el sabor dulce, a menudo incluyendo decoraciones elaboradas con buttercream, fondant o frutas.",
-        stock: 24
+        stock: 24,
         price: 250,
-         },
+        thumbnail: "cupcake-cream.jpg",
 
-          {
-        image: {"/images/products/cupcake-darkchocolate.jpg"},
-         id: 6,
+    },
+
+    {
+
+        id: 6,
         name: "Darkcholate",
         description: "pequeño pastel individual, similar a una tarta, conocido por su masa dulce y esponjosa, su tamaño de una porción y su distintiva y colorida decoración con coberturas y glaseados, siendo popular en celebraciones y fiestas. A diferencia de los muffins, los cupcakes se centran en la estética y el sabor dulce, a menudo incluyendo decoraciones elaboradas con buttercream, fondant o frutas.",
         stock: 15,
         price: 400,
-         },
+        thumbnail: "cupcake-darkchocolate.jpg",
 
-          {
-        image: {"/images/products/cupcake-de-Naranja.jpg"},
-         id: 7,
+    },
+
+    {
+
+        id: 7,
         name: "Delicia de Naranja Dulce",
         description: "pequeño pastel individual, similar a una tarta, conocido por su masa dulce y esponjosa, su tamaño de una porción y su distintiva y colorida decoración con coberturas y glaseados, siendo popular en celebraciones y fiestas. A diferencia de los muffins, los cupcakes se centran en la estética y el sabor dulce, a menudo incluyendo decoraciones elaboradas con buttercream, fondant o frutas.",
         stock: 20,
         price: 250,
-         },
+        thumbnail: "cupcake-de-Naranja.jpg",
 
-          {
-        image: {"/images/products/cupcake-pistacho.jpg"},
-         id: 8,
+    },
+
+    {
+
+        id: 8,
         name: "Delicia de Pistacho",
         description: "pequeño pastel individual, similar a una tarta, conocido por su masa dulce y esponjosa, su tamaño de una porción y su distintiva y colorida decoración con coberturas y glaseados, siendo popular en celebraciones y fiestas. A diferencia de los muffins, los cupcakes se centran en la estética y el sabor dulce, a menudo incluyendo decoraciones elaboradas con buttercream, fondant o frutas.",
         stock: 13,
         price: 750,
-         },
+        thumbnail: "cupcake-pistacho.jpg",
 
-          {
-        image: {"/images/products/cupcake-Emperatriz.jpg"},
-         id: 9,
+    },
+
+    {
+
+        id: 9,
         name: "Emperatriz",
         description: "pequeño pastel individual, similar a una tarta, conocido por su masa dulce y esponjosa, su tamaño de una porción y su distintiva y colorida decoración con coberturas y glaseados, siendo popular en celebraciones y fiestas. A diferencia de los muffins, los cupcakes se centran en la estética y el sabor dulce, a menudo incluyendo decoraciones elaboradas con buttercream, fondant o frutas.",
         stock: 36,
         price: 350,
-         },
+        thumbnail: "cupcake-Emperatriz.jpg",
 
-          {
-        image: {"/images/products/cupcake-for-kids.jpg"},
-         id: 10,
+    },
+
+    {
+
+        id: 10,
         name: "Box para Niños",
         description: "pequeño pastel individual, similar a una tarta, conocido por su masa dulce y esponjosa, su tamaño de una porción y su distintiva y colorida decoración con coberturas y glaseados, siendo popular en celebraciones y fiestas. A diferencia de los muffins, los cupcakes se centran en la estética y el sabor dulce, a menudo incluyendo decoraciones elaboradas con buttercream, fondant o frutas.",
         stock: 7,
         price: 1250,
-         },
+        thumbnail: "cupcake-for-kids.jpg",
 
-          {
-        image: {"/images/products/cupcake-frambuesa.jpg"},
-         id: 11,
+    },
+
+    {
+
+        id: 11,
         name: "Delicia de frambuesa",
         description: "pequeño pastel individual, similar a una tarta, conocido por su masa dulce y esponjosa, su tamaño de una porción y su distintiva y colorida decoración con coberturas y glaseados, siendo popular en celebraciones y fiestas. A diferencia de los muffins, los cupcakes se centran en la estética y el sabor dulce, a menudo incluyendo decoraciones elaboradas con buttercream, fondant o frutas.",
         stock: 28,
         price: 450,
-         },
+        thumbnail: "cupcake-frambuesa.jpg",
 
-          {
-        image: {"/images/products/cupcake-frutos-del-bosque.jpg"},
-         id: 12,
+    },
+
+    {
+
+        id: 12,
         name: "Frutos del Bosque",
         description: "pequeño pastel individual, similar a una tarta, conocido por su masa dulce y esponjosa, su tamaño de una porción y su distintiva y colorida decoración con coberturas y glaseados, siendo popular en celebraciones y fiestas. A diferencia de los muffins, los cupcakes se centran en la estética y el sabor dulce, a menudo incluyendo decoraciones elaboradas con buttercream, fondant o frutas.",
         stock: 22,
         price: 500,
-         },
+        thumbnail: "cupcake-frutos-del-bosque.jpg",
 
-          {
-        image: {"/images/products/cupcake-frutos-secos.jpg"},
-         id: 13,
+    },
+
+    {
+
+        id: 13,
         name: "Delicia de Crema Americana",
         description: "pequeño pastel individual, similar a una tarta, conocido por su masa dulce y esponjosa, su tamaño de una porción y su distintiva y colorida decoración con coberturas y glaseados, siendo popular en celebraciones y fiestas. A diferencia de los muffins, los cupcakes se centran en la estética y el sabor dulce, a menudo incluyendo decoraciones elaboradas con buttercream, fondant o frutas.",
         stock: 17,
         price: 750,
-         },
+        thumbnail: "cupcake-frutos-secos.jpg",
 
-          {
-        image: {"/images/products/cupcake-Halloween.jpg"},
-         id: 14,
+    },
+
+    {
+
+        id: 14,
         name: "Sweet Halloween",
         description: "pequeño pastel individual, similar a una tarta, conocido por su masa dulce y esponjosa, su tamaño de una porción y su distintiva y colorida decoración con coberturas y glaseados, siendo popular en celebraciones y fiestas. A diferencia de los muffins, los cupcakes se centran en la estética y el sabor dulce, a menudo incluyendo decoraciones elaboradas con buttercream, fondant o frutas.",
         stock: 15,
         price: 300,
-         },
+        thumbnail: "cupcake-Halloween.jpg",
 
-          {
-        image: {"/images/products/cupcake-love.jpg"},
-         id: 15,
+    },
+
+    {
+
+        id: 15,
         name: "San Valentín Box",
         description: "pequeño pastel individual, similar a una tarta, conocido por su masa dulce y esponjosa, su tamaño de una porción y su distintiva y colorida decoración con coberturas y glaseados, siendo popular en celebraciones y fiestas. A diferencia de los muffins, los cupcakes se centran en la estética y el sabor dulce, a menudo incluyendo decoraciones elaboradas con buttercream, fondant o frutas.",
         stock: 10,
         price: 1450,
-         },
+        thumbnail: "cupcake-love.jpg",
 
-          {
-        image: {"/images/products/cupcake-Oreo.jpg"},
-         id: 16,
+    },
+
+    {
+
+        id: 16,
         name: "Sorpresa Oreo",
         description: "pequeño pastel individual, similar a una tarta, conocido por su masa dulce y esponjosa, su tamaño de una porción y su distintiva y colorida decoración con coberturas y glaseados, siendo popular en celebraciones y fiestas. A diferencia de los muffins, los cupcakes se centran en la estética y el sabor dulce, a menudo incluyendo decoraciones elaboradas con buttercream, fondant o frutas. ",
         stock: 28,
         price: 400,
-         },
+        thumbnail: "cupcake-Oreo.jpg",
 
-          {
-        image: {"/images/products/cupcake-para-te.jpg"},
-         id: 17,
+    },
+
+    {
+
+        id: 17,
         name: "5 O'clock Box",
         description: "pequeño pastel individual, similar a una tarta, conocido por su masa dulce y esponjosa, su tamaño de una porción y su distintiva y colorida decoración con coberturas y glaseados, siendo popular en celebraciones y fiestas. A diferencia de los muffins, los cupcakes se centran en la estética y el sabor dulce, a menudo incluyendo decoraciones elaboradas con buttercream, fondant o frutas. ",
         stock: 10,
         price: 2500,
-         },
+        thumbnail: "cupcake-para-te.jpg",
 
-          {
-        image: {"/images/products/cupcake-party.jpg"},
+    },
+
+    {
+
         id: 18,
         name: "Party Box",
         description: "pequeño pastel individual, similar a una tarta, conocido por su masa dulce y esponjosa, su tamaño de una porción y su distintiva y colorida decoración con coberturas y glaseados, siendo popular en celebraciones y fiestas. A diferencia de los muffins, los cupcakes se centran en la estética y el sabor dulce, a menudo incluyendo decoraciones elaboradas con buttercream, fondant o frutas. ",
         stock: 12,
         price: 5300,
-         },
+        thumbnail: "cupcake-party.jpg",
 
-          {
-        image: {"/images/products/cupcake-redvelvert.jpg"},
-         id: 19,
+    },
+
+    {
+
+        id: 19,
         name: "Mini Redvelvert",
         description: "pequeño pastel individual, similar a una tarta, conocido por su masa dulce y esponjosa, su tamaño de una porción y su distintiva y colorida decoración con coberturas y glaseados, siendo popular en celebraciones y fiestas. A diferencia de los muffins, los cupcakes se centran en la estética y el sabor dulce, a menudo incluyendo decoraciones elaboradas con buttercream, fondant o frutas. ",
         stock: 36,
         price: 550,
-         },
+        thumbnail: "cupcake-redvelvert.jpg",
 
-          {
-        image: {"/images/products/cupcake-salado.jpg"},
-         id: 20,
+    },
+
+    {
+
+        id: 20,
         name: "Cheese Cupcake",
         description: "pequeño pastel individual, similar a una tarta, conocido por su masa dulce y esponjosa, su tamaño de una porción y su distintiva y colorida decoración con coberturas y glaseados, siendo popular en celebraciones y fiestas. A diferencia de los muffins, los cupcakes se centran en la estética y el sabor dulce, a menudo incluyendo decoraciones elaboradas con buttercream, fondant o frutas. ",
         stock: 28,
         price: 350,
-         },
+        thumbnail: "cupcake-salado.jpg",
 
-          {
-        image: {"/images/products/cupcake-tuti-fruti.jpg"},
-         id: 21,
+    },
+
+    {
+
+        id: 21,
         name: "Tuti-Fruti",
         description: "pequeño pastel individual, similar a una tarta, conocido por su masa dulce y esponjosa, su tamaño de una porción y su distintiva y colorida decoración con coberturas y glaseados, siendo popular en celebraciones y fiestas. A diferencia de los muffins, los cupcakes se centran en la estética y el sabor dulce, a menudo incluyendo decoraciones elaboradas con buttercream, fondant o frutas. ",
         stock: 18,
         price: 300,
-         },
+        thumbnail: "cupcake-tuti-fruti.jpg",
 
-          {
-        image: {"/images/products/cupcake-salado.jpg"},
-         id: 22,
+    },
+
+    {
+
+        id: 22,
         name: "Caprese",
         description: "pequeño pastel individual, similar a una tarta, conocido por su masa dulce y esponjosa, su tamaño de una porción y su distintiva y colorida decoración con coberturas y glaseados, siendo popular en celebraciones y fiestas. A diferencia de los muffins, los cupcakes se centran en la estética y el sabor dulce, a menudo incluyendo decoraciones elaboradas con buttercream, fondant o frutas. ",
         stock: 20,
         price: 550,
-         }
+        thumbnail: "cupcake-salado.jpg",
 
+    },
 
-      ]
-        
-    }  
-
-    localStorage.setItem(KEY_PRODUCTS, JSON.stringify(productsData));
-
-    return productsData;
-};
-
-const getProductsDataFromLocalStorage = () => {
-    const data = localStorage.getProduct(KEY_PRODUCTS);
-    return JSON.parse(data) || initializeProducts();
-};
-
-const fetchProductData = () => {
-    return new Promise((resolve) => {
-        resolve(getProductsDataFromLocalStorage());
-    });
-};
-
-export default {
-    fetchProductData,
-};
+];

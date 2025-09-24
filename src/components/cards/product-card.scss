@@ -39,14 +39,7 @@
         font-size: var.$font-size-md;
         color: var.$color-neutro-700;
         text-align: justify;
-        text-ellipsis($lines: 3) display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: $lines;
-        line-clamp: $lines;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        max-height: calc(1.4em * $lines);
-        word-break: break-word;
+
     }
 
     &__price {

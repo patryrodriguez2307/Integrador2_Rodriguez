@@ -43,6 +43,11 @@ export const useShoppingCart = () => {
 
     const addArticle = async (idProduct, quantity) => {
         const product = await fetchProductById(idProduct);
+        if (!productData || productData.stock <=0) return;
+        if (quantity + shoppingCart.articles.filter((item) => item.id === idProduct)[0]?.quantity > productsData.stock){
+            setStockAlert(true);
+            return;
+        }
 
         const articles = shoppingCart.articles;
         const index = articles.findIndex((item) => item.id === product.id);
@@ -79,6 +84,17 @@ export const useShoppingCart = () => {
             localStorage.setItem(KEY_SHOPPING_CART, JSON.stringify(data));
             setShoppingCart(data);
         }
+    };
+    const removeArticle = async (idProduct) => {
+        const articles = shoppingCart.articles.filter((item) => item.id !== idProduct);
+        const data = createShoppingCartSchema(articles);
+        localStorage.setItem(KEY_SHOPPING_CART, JSON.stringify(data));
+        setShoppingCart(data);
+    };
+    const clearCart = () =>{
+        const data = createShoppingCartSchema([]);
+        localStorage.setItem(KEY_SHOPPING_CART, JSON.stringify(data));
+        setShoppingCart(data);
     };
 
     useEffect(() => {
